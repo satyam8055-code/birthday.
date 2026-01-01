@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Satyam ??</title>
+<style>
+/* ====== General Styles ====== */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background: radial-gradient(circle, #0f2027, #000);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ====== Cinematic Intro ====== */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  flex-direction: column;
+  color: white;
+  font-size: 2.5rem;
+  animation: fadeOut 3s ease forwards;
+  animation-delay: 2s;
+}
+
+/* ====== Stars Background ====== */
+#stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star.png");
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* ====== Cake Animation ====== */
+.cake {
+  position: relative;
+  margin: 40px auto;
+  width: 200px;
+}
+.cake .layer {
+  height: 50px;
+  width: 200px;
+  background: pink;
+  margin: 5px auto;
+  border-radius: 10px;
+}
+.layer-top { background: #ff9aa2; }
+.layer-middle { background: #ffb7b2; }
+.layer-bottom { background: #ffdac1; }
+.plate {
+  width: 220px;
+  height: 10px;
+  background: white;
+  margin: auto;
+  border-radius: 10px;
+}
+.candle {
+  width: 10px;
+  height: 40px;
+  background: yellow;
+  margin: auto;
+  animation: flicker 1s infinite;
+}
+@keyframes flicker {
+  0% { box-shadow: 0 0 10px orange; }
+  50% { box-shadow: 0 0 20px red; }
+  100% { box-shadow: 0 0 10px orange; }
+}
+
+/* ====== Sections ====== */
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.5s ease;
+}
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+h1 { font-size: 3.5rem; animation: glow 2s infinite alternate; }
+h2 { font-size: 2.3rem; }
+h3 { font-size: 2rem; margin-bottom: 20px; }
+p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* ====== Songs ====== */
+.songs a {
+  display: inline-block;
+  margin: 15px;
+  padding: 12px 25px;
+  border: 2px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+.songs a:hover {
+  background: white;
+  color: black;
+}
+
+/* ====== Fireworks Container ====== */
+.fireworks-container {
+  position: absolute;
+  top:0; left:0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 5;
+}
+
+/* ====== Firework Styles ====== */
+.firework {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 5px white;
+}
+
+/* ====== Animations ====== */
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff; }
+  to { text-shadow: 0 0 30px #00e6ff; }
+}
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* ====== Background Music Player ====== */
+audio { display: none; }
+</style>
+</head>
+<body>
+
+<!-- ====== Cinematic Intro ====== -->
+<div id="intro">
+  <h1>Get Ready for Something Special…</h1>
+</div>
+
+<!-- ====== Stars Background ====== -->
+<div id="stars"></div>
+
+<!-- ====== Soft Background Music ====== -->
+<audio id="bgMusic" loop autoplay>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- ====== Fireworks Container ====== -->
+<div class="fireworks-container" id="fireworks"></div>
+
+<!-- ====== Cake Animation ====== -->
+<div class="cake">
+  <div class="plate"></div>
+  <div class="layer layer-bottom"></div>
+  <div class="layer layer-middle"></div>
+  <div class="layer layer-top"></div>
+  <div class="candle"></div>
+</div>
+
+<!-- ====== Layer 1 ====== -->
+<section class="section">
+  <h1>Happy Birthday ??</h1>
+  <h2>Satyam ??</h2>
+</section>
+
+<!-- ====== Layer 2 ====== -->
+<section class="section">
+  <p>
+    Today is not just your birthday,<br>
+    it’s a reminder of how much light you bring into lives.<br><br>
+    Your smile heals, your presence comforts,<br>
+    and your heart is truly rare.
+  </p>
+</section>
+
+<!-- ====== Layer 3 ====== -->
+<section class="section">
+  <h3>?? A Special Message from Me</h3>
+  <p>
+    Satyam, I hope this year brings you endless joy, laughter, and amazing memories.<br>
+    Keep shining and never stop being the incredible person you are!
+  </p>
+</section>
+
+<!-- ====== Layer 4 ====== -->
+<section class="section">
+  <h3>?? Karan Aujla Vibes</h3>
+  <p>Click below to play songs safely:</p>
+  <div class="songs">
+    <a href="https://open.spotify.com/search/Karan%20Aujla%20Love" target="_blank">?? Love</a>
+    <a href="https://open.spotify.com/search/Karan%20Aujla%20Care" target="_blank">?? Care</a>
+    <a href="https://open.spotify.com/search/Karan%20Aujla%20Emotional" target="_blank">?? Emotions</a>
+  </div>
+</section>
+
+<!-- ====== Layer 5 ====== -->
+<section class="section fireworks">
+  <h2>Always Remember ??</h2>
+  <p>
+    You are enough.<br>
+    You are loved deeply.<br>
+    And you deserve the best life has to offer.
+  </p>
+</section>
+
+<!-- ====== Final ====== -->
+<section class="section fireworks">
+  <h1>Once Again ??</h1>
+  <h2>Happy Birthday Satyam ??</h2>
+  <p>May your life always feel like your favorite song.</p>
+</section>
+
+<script>
+// ====== Layer Animation ======
+const sections = document.querySelectorAll(".section");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      // Trigger fireworks on last sections
+      if(entry.target.classList.contains("fireworks")) createFireworks();
+    }
+  });
+}, { threshold: 0.4 });
+sections.forEach(section => observer.observe(section));
+
+// ====== Remove Cinematic Intro ======
+setTimeout(() => { document.getElementById("intro").style.display = "none"; }, 5000);
+
+// ====== Background Music ======
+const bgMusic = document.getElementById("bgMusic");
+bgMusic.volume = 0.2;
+bgMusic.play().catch(()=>{}); 
+
+// ====== Fireworks Logic ======
+function createFireworks() {
+  const container = document.getElementById("fireworks");
+  for(let i=0; i<50; i++){
+    const firework = document.createElement("div");
+    firework.classList.add("firework");
+    firework.style.left = Math.random()*100 + "%";
+    firework.style.top = Math.random()*50 + "%";
+    firework.style.background = `hsl(${Math.random()*360},100%,70%)`;
+    container.appendChild(firework);
+
+    animateFirework(firework);
+  }
+}
+function animateFirework(el){
+  const x = (Math.random()-0.5)*200;
+  const y = (Math.random()-0.5)*200;
+  const duration = Math.random()*2 + 1;
+  el.animate([
+    { transform: "translate(0,0) scale(1)", opacity:1 },
+    { transform: `translate(${x}px,${y}px) scale(0.5)`, opacity:0 }
+  ], { duration: duration*1000, easing:"ease-out", iterations:1 });
+  setTimeout(()=>el.remove(), (Math.random()*2 + 1)*1000);
+}
+</script>
+
+</body>
+</html>
